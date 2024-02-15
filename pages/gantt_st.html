@@ -71,9 +71,7 @@
       const today = new Date();
       const totalTime = new Date(end).getTime() - new Date(start).getTime();
       const timePassed = today.getTime() - new Date(start).getTime();
-      console.log(totalTime, timePassed);
       if (totalTime === 0 || timePassed < 0) return 0;
-      console.log((timePassed / totalTime));
       return (timePassed / totalTime) * 100;
     }
 
@@ -94,7 +92,7 @@
       });
     } 
 
-    async function getToday() {
+    function getToday() {
       const todayStr = new Date().toISOString().slice(0, 10);
       return [{
         "id": 'Today',
@@ -117,7 +115,7 @@
       return dataExtra;
     }
 
-    async function getData() {
+    async function getRemoteData() {
       return await fetch('/gitlab/data')
         .then(response => {
           if (!response.ok) {
@@ -135,19 +133,19 @@
 
     async function genGantt(viewMode) {
       showLoadingModal();
-      // let data = await getData();
+      // let data = await getRemoteData();
       // const tasks = transformData(data);
       const tasks = transformData(await getLocalData());
       const taskExtras = transformData(await getLocalDataExtra()); // []
 
       const resultTasks = [...tasks, ...taskExtras];
       resultTasks.sort((a, b) => new Date(a.start) - new Date(b.start)); 
-      console.log(resultTasks);
+      // console.log(resultTasks);
 
       if (viewMode) {
         ganttOptions.view_mode = viewMode;
       }
-      gantt = new Gantt("#gantt", [...resultTasks, ...transformData(await getToday())], ganttOptions);
+      gantt = new Gantt("#gantt", [...resultTasks, ...transformData(getToday())], ganttOptions);
       
       const oldest = gantt.get_oldest_starting_date().getTime();
       const t = new Date() - oldest;
