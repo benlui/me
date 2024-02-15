@@ -10,6 +10,9 @@ body {
 .gantt .bar-milestone .bar {
   fill: #c74343;
 }
+.gantt .bar-today .bar {
+  fill: #02c366;
+}
 .heading {
   text-align: center;
 }

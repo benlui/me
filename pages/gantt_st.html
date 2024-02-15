@@ -18,7 +18,10 @@
 
   <div id="divTop">
     <h2>FYPM Project (Milestones as Gantt Chart)</h2>
-    <button onclick="genGantt()">Refresh</button>
+    <div>
+      <button onclick="genGantt('Week')">View by Week</button>
+      <button onclick="genGantt('Month')">View by Month</button>
+    </div>
   </div>
   <div id="divContent"><svg id="gantt"></svg></div>
 
@@ -34,7 +37,7 @@
       step: 5,
       view_modes: ['Quarter Day', 'Half Day', 'Day', 'Week', 'Month'],
       bar_height: 20,
-      bar_corner_radius: 10,
+      bar_corner_radius: 5,
       arrow_curve: 5,
       padding: 18,
       view_mode: 'Week',
@@ -64,21 +67,46 @@
       }
     };
 
+    function compileProgress(start, end) {
+      const today = new Date();
+      const totalTime = new Date(end).getTime() - new Date(start).getTime();
+      const timePassed = today.getTime() - new Date(start).getTime();
+      console.log(totalTime, timePassed);
+      if (totalTime === 0 || timePassed < 0) return 0;
+      console.log((timePassed / totalTime));
+      return (timePassed / totalTime) * 100;
+    }
+
     function transformData(data) {
       return data.map(obj => {
         return {        
-          id: obj.id,
+          id: obj.title,
           name: obj.title,
           description: obj.description,
           start: obj.start_date, 
           end: obj.due_date,
-          progress: ('closed' === obj.state) ? 100 : (('active' === obj.state) ? 0 : null),
+          progress: ('closed' === obj.state) ? 100 : (('active' === obj.state) ? (compileProgress(obj.start_date, obj.due_date)) : null),
           web_url: obj.web_url,
+          dependencies: obj.dependencies,
           custom_class: obj.custom_class
           // custom_class: 'bar-milestone' // optional
         }
       });
     } 
+
+    async function getToday() {
+      const todayStr = new Date().toISOString().slice(0, 10);
+      return [{
+        "id": 'Today',
+        "title": `Today (${todayStr})`,
+        "description": "",
+        "state": "active",
+        "due_date": todayStr,
+        "start_date": todayStr,
+        "expired": false,
+        "custom_class": "bar-today"
+    }];
+    }
 
     async function getLocalData() {
       // console.log(data);
@@ -105,7 +133,7 @@
         });
     }
 
-    async function genGantt() {
+    async function genGantt(viewMode) {
       showLoadingModal();
       // let data = await getData();
       // const tasks = transformData(data);
@@ -116,7 +144,10 @@
       resultTasks.sort((a, b) => new Date(a.start) - new Date(b.start)); 
       console.log(resultTasks);
 
-      gantt = new Gantt("#gantt", resultTasks, ganttOptions);
+      if (viewMode) {
+        ganttOptions.view_mode = viewMode;
+      }
+      gantt = new Gantt("#gantt", [...resultTasks, ...transformData(await getToday())], ganttOptions);
       
       const oldest = gantt.get_oldest_starting_date().getTime();
       const t = new Date() - oldest;

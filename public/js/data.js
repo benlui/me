@@ -161,8 +161,8 @@ const data = [
         "description": "Batch 4 (Phase 1)",
         "state": "active",
         "created_at": "2024-02-02T16:26:41.724+08:00",
-        "updated_at": "2024-02-05T09:21:41.882+08:00",
-        "due_date": "2024-03-29",
+        "updated_at": "2024-02-15T15:03:57.701+08:00",
+        "due_date": "2024-03-15",
         "start_date": "2024-02-05",
         "expired": false,
         "web_url": "https://gitlab-gen.polyu.edu.hk/benlui/csd/-/milestones/14"
@@ -185,14 +185,28 @@ const data = [
         "id": 158,
         "iid": 12,
         "project_id": 346,
-        "title": "3.3",
-        "description": "Phase 3 (Batch 3: ME)",
+        "title": "3.2.x",
+        "description": "Batch 2 UAT fixes, plus Batch 3 (ME) Phase 2",
         "state": "active",
         "created_at": "2023-12-11T16:55:55.985+08:00",
-        "updated_at": "2023-12-11T16:56:45.229+08:00",
+        "updated_at": "2024-02-15T15:00:57.180+08:00",
         "due_date": "2024-04-30",
         "start_date": "2024-04-01",
         "expired": false,
         "web_url": "https://gitlab-gen.polyu.edu.hk/benlui/csd/-/milestones/12"
+    },
+    {
+        "id": 183,
+        "iid": 15,
+        "project_id": 346,
+        "title": "3.3",
+        "description": "",
+        "state": "active",
+        "created_at": "2024-02-15T15:05:01.014+08:00",
+        "updated_at": "2024-02-15T15:05:01.014+08:00",
+        "due_date": "2024-05-24",
+        "start_date": "2024-04-15",
+        "expired": false,
+        "web_url": "https://gitlab-gen.polyu.edu.hk/benlui/csd/-/milestones/15"
     }
 ];
