@@ -41,7 +41,8 @@ body {
 
 .introduction-section,
 .location-section,
-.questions-section {
+.questions-section,
+.projects-section {
     max-width: 38em;
     margin-left: auto;
     margin-right: auto;
@@ -51,13 +52,15 @@ body {
 .introduction-section > p,
 .location-section > p,
 .questions-section,
+.projects-section,
 .content-footer > p {
     /* Typography Declarations */
     font-weight: 300;
     letter-spacing: 0.05em;
 }
 
-.questions-section > h2 {
+.questions-section > h2,
+.projects-section > h2 {
     font-family: "Gentium Book Basic", Georgia, serif;
     font-size: 1.2em;
     font-weight: bold;
