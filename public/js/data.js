@@ -187,10 +187,10 @@ const data = [
         "project_id": 346,
         "title": "3.2.x",
         "description": "Batch 2 UAT fixes, plus Batch 3 (ME) Phase 2",
-        "state": "active",
+        "state": "closed",
         "created_at": "2023-12-11T16:55:55.985+08:00",
         "updated_at": "2024-02-15T15:00:57.180+08:00",
-        "due_date": "2024-06-10",
+        "due_date": "2024-05-31",
         "start_date": "2024-05-01",
         "expired": false,
         "web_url": "https://gitlab-gen.polyu.edu.hk/benlui/csd/-/milestones/12"
@@ -204,8 +204,8 @@ const data = [
         "state": "active",
         "created_at": "2024-02-15T15:05:01.014+08:00",
         "updated_at": "2024-02-15T15:05:01.014+08:00",
-        "due_date": "2024-06-21",
-        "start_date": "2024-06-03",
+        "due_date": "2024-08-23",
+        "start_date": "2024-08-05",
         "expired": false,
         "web_url": "https://gitlab-gen.polyu.edu.hk/benlui/csd/-/milestones/15"
     },
@@ -218,8 +218,8 @@ const data = [
         "state": "active",
         "created_at": "2024-02-15T15:05:01.014+08:00",
         "updated_at": "2024-02-15T15:05:01.014+08:00",
-        "due_date": "2024-07-30",
-        "start_date": "2024-07-02",
+        "due_date": "2024-09-13",
+        "start_date": "2024-08-26",
         "expired": false,
         "web_url": "https://gitlab-gen.polyu.edu.hk/benlui/csd/-/milestones/16"
     }
