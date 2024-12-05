@@ -1,0 +1,71 @@
+/* CSS Document */
+* {
+	font-family: 'Open Sans', Arial, 'Microsoft JhengHei', Helvetica, sans-serif !important;
+}
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Open Sans', Arial, 'Microsoft JhengHei', Helvetica, sans-serif !important;
+	background:url(../images/bg01.png) no-repeat top center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	text-align:center;
+}
+.content{
+	display:inline-block;
+	text-decoration:none;
+	color:#060;
+	background:url(../images/wbg95.png) repeat;
+	border-radius:20px;
+	padding:30px;
+	margin:40px;
+}
+.result_boxes{
+	display:inline-block;
+}
+.result{
+	display:inline-block;
+	height:50px;
+	font-size:50px;
+	padding:20px;
+}
+
+#drawBox{
+	display:inline-block;
+	min-width:100px;
+	height:100px;
+	font-size:80px;
+	padding:15px;
+	border:5px solid #F00;
+	border-radius:20px;
+}
+
+#drawbar{
+	display:block;
+	width:100%;
+	margin-top:20px;
+}
+#draw{
+	display:inline-block;
+	font-size:60px;	
+	width:75%;
+	padding:15px 0;
+	border-radius:20px;
+}
+#total_draw{
+	display:inline-block;
+	font-size:60px;	
+	width:20%;
+	text-align:center;
+	padding:15px 0;
+	margin-left: 15px;
+	border-radius:20px;
+}
+
+#show_results{
+	text-align:left;
+	display:block;
+	font-size:24px;
+}
