@@ -109,6 +109,7 @@ $(document).ready(function () {
 		//alert(size);
 		nowDraw=1;
 		function start_draw(){
+			setTimeout(function() {console.log('hi hi there ................')}, 5000);
 			var size = players.length;
 			if(size==0){
 				alert("完");
