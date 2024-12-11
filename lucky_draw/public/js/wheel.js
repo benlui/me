@@ -9,7 +9,7 @@ $(document).ready(function () {
     const shortest = (height > width) ? width : height;
     // console.log(height, width);
     const CHART_SIZE = (shortest < 500) ? ((shortest < 400) ? 250 : 300) : 500;
-    const FONT_SIZE = (shortest < 500) ? ((shortest < 400) ? 11 : 14) : 16;
+    const FONT_SIZE = (shortest < 500) ? ((shortest < 400) ? 10 : 14) : 16;
 
     var padding = {top:20, right:40, bottom:0, left:0},
                 w = CHART_SIZE - padding.left - padding.right,
@@ -90,6 +90,7 @@ $(document).ready(function () {
         .style({"fill":"white","cursor":"pointer"});
     //spin text
     container.append("text")
+        .attr("id", "spin-text")
         .attr("x", 0)
         .attr("y", 15)
         .attr("text-anchor", "middle")
@@ -100,6 +101,8 @@ $(document).ready(function () {
     $(`#chart`).width(`${CHART_SIZE}px`);
     $(`#chart`).height(`${CHART_SIZE}px`);
     $(`text`).css(`font-size`, `${FONT_SIZE}px`);
+    $(`li`).css(`font-size`, `${FONT_SIZE}px`);
+    $(`#spin-text`).css(`font-size`, `30px`);
 
 
     // container.on("click", spin); // SPIN clicked

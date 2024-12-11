@@ -14,6 +14,23 @@
     <div class="content">
         <div id="chart"></div>
         <div id="question"><h1></h1></div>
+        <div style="text-align:right" class="info">
+            <a href="javascript:void(0)" onclick="$('#info').toggle();"><img src="public/images/chat.png" alt="Info" width="32" height="32" /></a>
+        </div>
+    </div>
+
+    <div id="info" style="display: none; background-color: white; border: 1px solid black; padding: 10px; margin: 10px 50px 10px 50px;" onclick="$('#info').toggle();">
+        <h3>Background image generated using PolyU GenAI</h2>
+        <style>
+            #info ol {
+                text-align: left;
+            }
+        </style>
+        <ol>
+            <li>Tool: https://genai.polyu.edu.hk/SD3</li>
+            <li>Prompt: Christmas party background, Plain in the middle, Simple design without any word included, With some technology elements, Origami</li>
+            <li>Seed Number: 27665900</li>
+        </ol>
     </div>
     <script type='text/javascript' src='public/js/vendor/d3.v3.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='public/js/vendor/jquery-3.7.1.min.js'></script>
