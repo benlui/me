@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="content">
+    <div id="content" class="content">
         <h1 id="title">ITS Christmas Party - Lucky Draw</h1>
         <h2 id="round">Round 1</h2>
         
@@ -23,11 +23,18 @@
         </div>
         <div id="show_results"></div>
         <div style="text-align:right; margin-top: 50px;" class="info">
-            <a href="javascript:void(0)" onclick="$('#info').toggle();"><img src="public/images/chat.png" alt="Info" width="32" height="32" /></a>
+            <a href="javascript:void(0)" onclick="showResultsDiv();"><img src="public/images/lucky.png" alt="Lucky" width="32" height="32" /></a>
+            <a href="javascript:void(0)" onclick="showInfoDiv();"><img src="public/images/chat.png" alt="Info" width="32" height="32" /></a>
         </div>
     </div>
-    <div id="info" style="position: absolute; width: 100%; bottom: 10px; background-color: white; border: 1px solid black; padding: 10px;" onclick="$('#info').toggle();">
-        <h3>Background image generated using <a href="https://genai.polyu.edu.hk/" target="_blank">PolyU GenAI</a></h2>
+    <div id="lucky_results" style="display:none; overflow: auto; position: absolute; height: 95%; width: 20%; top: 10px; right: 0px; background-color: white; border: 1px solid black; padding: 10px;" onclick="showResultsDiv();">
+        <h3 id="lucky_results_title">Lucky Draw Result</h3>
+        <table id="lucky_results_table">
+            
+        </table>
+    </div>
+    <div id="info" style="position: absolute; width: 100%; bottom: 10px; text-align:center; background-color: white; border: 1px solid black; padding: 10px;" onclick="showInfoDiv();">
+        <h3>Background image generated using <a href="https://genai.polyu.edu.hk/" target="_blank">PolyU GenAI</a></h3>
         <style>
             #info ol {
                 text-align: left;
@@ -40,6 +47,8 @@
         </ol>
     </div>
     <script type='text/javascript' src='public/js/vendor/jquery-3.7.1.min.js'></script>
+    <script type='text/javascript' src='public/js/data/players.js'></script>
+    <script type='text/javascript' src='public/js/data/tables.js'></script>
     <script type='text/javascript' src='public/js/script.js'></script>
 </body>
 </html>
