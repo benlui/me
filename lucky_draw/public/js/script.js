@@ -167,7 +167,7 @@ $(document).ready(function () {
 				$("#drawBox").html(players[lucky_num]['key']);
 				if(ran_time++<ran_total){
 					setTimeout(ran, randomSpeed);	
-				}else{
+				} else{
 					//console.log("lucky_num:"+lucky_num); 
 					//console.log("Value:"+players[lucky_num]); 
 					//console.log("nowDraw:"+nowDraw); 
@@ -182,7 +182,8 @@ $(document).ready(function () {
 						$("#draw").prop("disabled", false);
 					}
 					// console.log(`Current lucky_players[count:${lucky_players.length}]:`, lucky_players); 
-					$('#lucky_results_title').html('Lucky Draw Result (Total: '+lucky_players?.length+')');
+					const summary_txt = '______________________________<br/>(Total: '+lucky_players?.length+', Round: '+nowRound+')';
+					$('#lucky_results_count').html(summary_txt);
 					$("#lucky_results_table").html("<tr><th width='10%'>R#</th><th width='35%'>Draw No.</th><th width='55%'>Name</th></tr>"+lucky_players.map(v=>"<tr><td>"+v['round']+"</td><td>"+v['key']+"</td><td>"+v['value']+"</td></tr>").join(""));
 					$("#lucky_results").scrollTop($("#lucky_results")[0].scrollHeight);
 					
