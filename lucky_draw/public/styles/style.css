@@ -30,7 +30,7 @@ body{
 .result{
 	display:inline-block;
 	height:50px;
-	font-size:50px;
+	font-size:40px;
 	padding:20px;
 }
 
@@ -75,5 +75,8 @@ body{
 	border-radius: 20px 0px 0px 20px;
 	text-align:left;
 	display:block;
-	font-size:15px;
+	font-size:20px;
+}
+#lucky_results_table td {
+	padding-bottom:10px;
 }

@@ -41,7 +41,7 @@ function showResultsDiv() {
 	
 	if(textAlign === 'center') {
 		$('body').css('text-align', 'left');
-		$('#content').css('width', '70%');
+		$('#content').css('width', '60%');
 	} else {
 		$('body').css('text-align', 'center');
 		$('#content').css('width', '50%');
@@ -183,7 +183,7 @@ $(document).ready(function () {
 					}
 					// console.log(`Current lucky_players[count:${lucky_players.length}]:`, lucky_players); 
 					$('#lucky_results_title').html('Lucky Draw Result (Total: '+lucky_players?.length+')');
-					$("#lucky_results_table").html("<tr><th width='5%'>R#</th><th width='25%'>DrawNo.</th><th width='70%'>Name</th></tr>"+lucky_players.map(v=>"<tr><td>"+v['round']+"</td><td>"+v['key']+"</td><td>"+v['value']+"</td></tr>").join(""));
+					$("#lucky_results_table").html("<tr><th width='10%'>R#</th><th width='40%'>Draw No.</th><th width='50%'>Name</th></tr>"+lucky_players.map(v=>"<tr><td>"+v['round']+"</td><td>"+v['key']+"</td><td>"+v['value']+"</td></tr>").join(""));
 					$("#lucky_results").scrollTop($("#lucky_results")[0].scrollHeight);
 					
 				}
