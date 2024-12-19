@@ -64,7 +64,7 @@ $(document).ready(function () {
 
 	var titleTxt = 'ITS Christmas Party - Lucky Draw';
 	var imgFile = 'public/images/P02.png';
-	var totalDraw = 5;
+	var totalDraw = 12;
 	var nowRound = 0;
 	
 	var randomSpeed = 10;
@@ -183,7 +183,7 @@ $(document).ready(function () {
 					}
 					// console.log(`Current lucky_players[count:${lucky_players.length}]:`, lucky_players); 
 					$('#lucky_results_title').html('Lucky Draw Result (Total: '+lucky_players?.length+')');
-					$("#lucky_results_table").html("<tr><th width='10%'>R#</th><th width='40%'>Draw No.</th><th width='50%'>Name</th></tr>"+lucky_players.map(v=>"<tr><td>"+v['round']+"</td><td>"+v['key']+"</td><td>"+v['value']+"</td></tr>").join(""));
+					$("#lucky_results_table").html("<tr><th width='10%'>R#</th><th width='35%'>Draw No.</th><th width='55%'>Name</th></tr>"+lucky_players.map(v=>"<tr><td>"+v['round']+"</td><td>"+v['key']+"</td><td>"+v['value']+"</td></tr>").join(""));
 					$("#lucky_results").scrollTop($("#lucky_results")[0].scrollHeight);
 					
 				}
