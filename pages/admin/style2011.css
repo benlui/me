@@ -1,0 +1,26 @@
+.text {font-size: 10pt; font-family: Verdana;}
+.ctext {font-size: 12pt; font-family: 細明體_HKSCS;}
+.print {font-size: 9pt; font-family: Times;}
+
+.caption {font-size: 8pt; font-family: Verdana;}
+
+.msg {font-weight: bold; font-size: 10pt; font-family: Verdana; color: #ff0000;}
+
+.title {font-weight: bold; font-size: 10pt; font-family: Verdana; text-align: left;}
+
+.table {width: 100%; font-family: Verdana; font-size: 10pt; border-right: thin solid; border-top: thin solid; border-left: thin solid; border-bottom: thin solid;}
+.itable {width: 100%; font-family: Verdana; font-size: 10pt;}
+.header {vertical-align: top; font-weight: bold; color: #ffffff; background-color: #808080;}
+.footer {vertical-align: top; background-color: #e0e0e0;}
+.row {vertical-align: top; background-color: #ffffe0;}
+.row1 {vertical-align: top; background-color: #ffffc0;}
+.row2 {vertical-align: top; background-color: #ffe0ff;}
+.row3 {vertical-align: top; background-color: #ffc0ff;}
+.row4 {vertical-align: top; background-color: #e0ffff;}
+.row5 {vertical-align: top; background-color: #c0ffff;}
+
+.menu {width: 100%; font-family: Verdana; font-size: 9pt;}
+.menupage {font-size: 10pt; font-family: Verdana; background-color: #d0e0FF}
+.menupage1 {font-size: 10pt; font-family: Verdana; background-color: #FFe0e0}
+.menupage2 {font-size: 10pt; font-family: Verdana; background-color: #e0FFe0}
+.menupage3 {font-size: 10pt; font-family: Verdana; background-color: #e0e0FF}
